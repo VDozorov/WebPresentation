@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<!--Written by Vladislav Dozorov, 1/27/22-->
+<html lang="en">
+	<head>
+        <style>
+            button.toggleBtn {
+                background-color: transparent;
+                text-decoration: underline;
+                color:blue;
+                border:none;
+                cursor: pointer;
+                white-space: normal;
+                word-wrap: break-word;
+                padding: 0px;
+                margin: 0px;
+            }
+            .buttonItalic {
+                font-style: italic;
+            }
+            #hiddenButton {
+                color: black;
+                cursor: text;
+                text-decoration: none;
+            }
+            h1 {
+                 font-size: 1.9em;
+                 margin-bottom: 0em;
+                 padding: 0em;
+            }
+            #headerButton {
+                font-size: 1.9em;
+                margin-top: 0.83em;
+                margin-bottom: 0em;
+                margin-left: 0;
+                margin-right: 0;
+                font-weight: bold;
+            }
+            #firstp {
+                margin-top: 0.5em;
+            }
+            button.toggleBtn:hover {
+                background-color: yellow;
+            }
+            #hiddenButton:hover {
+                background-color: transparent;
+            }
+            /* Set display to none for images*/
+            span.innerd {
+                border: 4px black solid;
+                margin: 2px;
+                padding: 2px;
+                display: none;
+                /* visibility: hidden; */
+                text-align: center;
+                float: right;
+                clear: right;
+                font-style: normal;
+            }
+
+            span.undern {
+                border: 4px black solid;
+                margin: 2px;
+                padding: 2px;
+                display: none;
+                /* visibility: hidden; */
+                text-align: center;
+                float: none;
+                clear: none;
+                margin-left:auto;
+                font-style: normal;
+            }
+
+            .tallContainer {
+                max-width: 20%;
+            }
+
+            .wideContainer {
+                max-width: 40%;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            img.headImage {
+                max-width: 35%;
+                height:auto;
+            }
+
+            .ri {
+                text-align: right;
+            }
+            .smallcaps {
+                font-variant: small-caps;
+                margin-right: 10%;
+            }
+            .ind {
+                margin-left: 10%;
+            }
+            img.ri {
+                margin-left: auto;
+            }
+            ul {
+               list-style-type: none;
+            }
+            li {
+                text-indent: -2em;
+                padding-left: 2em;
+            }
+        </style>
+	</head>
+	<body>
+        <p class="ri"><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />Aliquam accumsan sollicitudin enim."</em></p>
+        <p class="ri">
+            <span class="ImgButtonPair">
+                <button class="toggleBtn buttonItalic" onclick="toggle(myImg)">Quote source</button>
+                <br/>
+                <span class="undern wideContainer">
+                    <img class="ri" id="img1" src="images/image01.jpg" alt="" />
+                    <br />Caption for Image 1
+                </span>
+            </span>
+        </p>
+        <h1>Header Title</h1>
+        <p class="ri"><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /> Sed luctus.</em></p>
+        <br />
+        <p>
+            Lorem ipsum dolor sit amet, 
+            <span class="ImgButtonPair">
+                <button class="toggleBtn" onclick="toggle(myImg)">consectetur adipiscing elit.</button>
+                <span class="innerd wideContainer">
+                    <img id="img2" src="images/image02.jpg" alt="" />
+                    <br />Caption for Image 2
+                </span>
+            </span>
+            Integer malesuada, nunc vitae vehicula fermentum, neque diam auctor eros, vitae volutpat leo enim a justo. Donec suscipit nunc facilisis urna scelerisque, sed faucibus dolor tempus. Praesent elementum, nisi ut pulvinar lobortis, augue mi semper lorem, sit amet fermentum diam dui id massa. Aenean et semper lectus, nec tincidunt orci. Donec quis neque sapien. Maecenas maximus scelerisque leo, non sollicitudin odio condimentum vel. Duis vestibulum dui nisi, a accumsan neque dignissim lobortis. Nullam varius iaculis mollis. Sed mattis sapien turpis, eu sagittis elit venenatis in. Curabitur pretium augue ac dignissim vestibulum. Maecenas at massa eros. Phasellus ut ligula elit. Aenean maximus sapien sit amet ipsum vestibulum, id porta nisl vestibulum. Nulla at imperdiet nibh.
+        </p>
+        <p>
+            Aliquam vitae dui a elit maximus lobortis. Aliquam faucibus quam ornare massa 
+            <span class="ImgButtonPair">
+                <button class="toggleBtn" onclick="toggle(myImg)">vehicula posuere.</button>
+                <span class="innerd tallContainer">
+                    <img id="img3" src="images/image03.jpg" alt="" />
+                    <br />Caption for Image 3
+                </span>
+            </span>
+            Praesent consequat ultrices malesuada. Donec ultrices augue purus, non volutpat magna porttitor ac. Sed ultricies ut ipsum ac tempus. Praesent eleifend odio at ipsum dapibus, sit amet vestibulum lectus bibendum. 
+            <span class="ImgButtonPair">
+                <button class="toggleBtn" onclick="toggle(myImg)">Quisque eget</button>
+                <span class="innerd tallContainer">
+                    <img id="img4" src="images/image04.jpg" alt="" />
+                    <br />Caption for Image 4
+                </span>
+            </span>
+            ligula vitae libero tempus accumsan. Mauris interdum convallis ex, nec auctor dolor convallis eget. In pellentesque sit amet arcu vel faucibus. Etiam convallis felis augue, eu hendrerit nulla tempor et. In aliquam dui sit amet eros blandit pretium.
+        </p>
+        <p>
+            Donec efficitur vestibulum dui, quis ornare ante. Duis placerat venenatis tristique. Nunc semper euismod orci et commodo. Phasellus id mauris in ex rhoncus consectetur sit amet sit amet eros. Fusce a lobortis lorem. Sed facilisis mi leo, eu dapibus ex mattis sit amet. Duis egestas est sed ex vehicula vehicula sit amet quis justo. 
+            <span class="ImgButtonPair">
+                <button class="toggleBtn" onclick="toggle(myImg)">Ut id ultricies ligula.</button>
+                <span class="innerd wideContainer">
+                    <img id="img5" src="images/image05.jpg" alt="" />
+                    <br />Caption for Image 5
+                </span>
+            </span>
+            Curabitur finibus nulla at ornare finibus. Duis sed dapibus dolor. Sed efficitur dolor a posuere sollicitudin. Aenean eu enim nibh. Mauris et augue molestie, interdum leo eu, fringilla orci. Morbi gravida sagittis porttitor. Sed nec nunc id ex sollicitudin tristique.
+        </p>
+        <p>
+            Ut euismod ipsum vel venenatis pellentesque. Cras volutpat ut nisl in tempor. Phasellus condimentum eu velit imperdiet molestie. Vestibulum ultrices interdum egestas. Vivamus tincidunt velit vulputate mi ultrices, a congue leo convallis. Nam maximus, nunc eget aliquam egestas, ante quam bibendum erat, ac iaculis tortor nunc ac odio. Sed in est rutrum, tristique lacus auctor, ullamcorper lorem. Duis ut elit elit. In aliquam congue metus a tempor. Praesent vehicula molestie quam. In tincidunt augue eget tellus tristique ullamcorper. Ut nec sodales nisi. Nulla dapibus orci lacinia diam ullamcorper, ac bibendum massa vulputate. 
+            <span class="ImgButtonPair">
+                <button class="toggleBtn" onclick="toggle(myImg)">Aliquam at semper elit.</button>
+                <span class="innerd tallContainer">
+                    <img id="img6" src="images/image06.jpg" alt="" />
+                    <br />Caption for Image 6
+                </span>
+            </span>
+        </p>
+        <p>
+            <span class="ImgButtonPair">
+                <button class="toggleBtn" onclick="toggle(myImg)">Aliquam in porta dui.</button>
+                <span class="innerd wideContainer">
+                    <img id="img7" src="images/image07.jpg" alt="" />
+                    <br />Caption for Image 7
+                </span>
+            </span>
+            Nunc malesuada commodo mattis. Vivamus iaculis, odio ut aliquam tincidunt, lorem velit pharetra nulla, in auctor ex nisl a lorem. Nulla mollis nunc at magna finibus venenatis. Quisque sed mi accumsan, vestibulum nisi pharetra, porta augue. Mauris sed lacus turpis. Sed orci risus, pharetra vel odio ut, consequat pellentesque ante. Aenean nisi tortor, ornare ac hendrerit ut, euismod non augue. Morbi dapibus nulla in iaculis 
+            <span class="ImgButtonPair">
+                <button class="toggleBtn" onclick="toggle(myImg)">blandit.</button>
+                <span class="innerd wideContainer">
+                    <img id="img8" src="images/image08.jpg" alt="" />
+                    <br />Caption for Image 8
+                </span>
+            </span>
+            Donec et convallis est, sit amet vulputate tellus. In varius neque felis, eu consequat massa imperdiet sit amet. Praesent blandit sed mi quis consequat. Phasellus at posuere nisl.
+        </p>
+        <p>
+            Cras eu ullamcorper elit. Integer sit amet odio eu tellus dignissim tincidunt ut gravida augue. Sed id consequat nunc. Morbi ut nisi non massa luctus lobortis. Sed laoreet, quam sit amet scelerisque laoreet, ligula ex tristique dolor, quis tempor mi velit vel neque. Aenean sagittis, nisi at ultricies luctus, dui massa cursus orci, sit amet tempus leo turpis eget purus. Praesent elementum convallis eros, ut viverra ligula aliquam vel.
+        </p>
+        <h1>References</h1>
+        <ul>
+            <li>Integer in elit et nulla elementum luctus. <em>Ut maximus est nec efficitur bibendum.</em></li>
+            <li>Donec consequat erat viverra, suscipit mauris vitae, finibus lorem. <em>Duis eget mauris sodales, sagittis ipsum at, vestibulum erat.</em></li>
+            <li>Mauris vel mauris sollicitudin, aliquam massa at, euismod ex. <em>Etiam in leo eu mi gravida varius vitae et diam.</em></li>
+            <li>Mauris tristique magna non enim blandit ornare. <em>Duis blandit arcu ac sem venenatis porta.</em></li>
+            <li>Ut gravida dolor id lectus hendrerit pulvinar. <em>Pellentesque consequat lacus eu nisi fringilla, nec efficitur nulla fringilla.</em></li>
+        </ul>
+        <br />
+        <p class="ri smallcaps">Firstname Lastname</p>
+
+        <script>
+            window.onload = function() {
+                var listItems = document.querySelectorAll('body span.ImgButtonPair');
+                var imagePairs = document.querySelectorAll('span.innerd');
+                var imagePairs2 = document.querySelectorAll('span.undern');
+                
+                for (var i = 0; i < listItems.length; i++) {
+                    listItems[i].querySelector('.toggleBtn').onclick = function (e) {
+                        var img = e.target.parentNode.querySelector('span');
+                        var display = getComputedStyle(img).display=='none'?'inline-block':'none';
+                        //var display = getComputedStyle(img).visibility=='hidden'?'visible':'hidden';
+                        for (var j = 0; j < imagePairs.length; j++) {
+                            imagePairs[j].style.display = 'none';
+                        }
+                        for (var k = 0; k < imagePairs2.length; k++) {
+                            imagePairs2[k].style.display = 'none';
+                        }
+                        img.style.display = display;
+                        //img.style.visibility = display;
+                    };
+                }
+            };
+        </script>
+	</body>
+</html>
