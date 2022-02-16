@@ -6,5 +6,7 @@ Buttons made to look like links will open an associated image and close previous
 Made with HTML, CSS, and Javascript.
 
 TODO:
+
 -Add more display options for images of varying sizes
+
 -Adjust how the site displays for mobile devices
